@@ -104,10 +104,31 @@ function randBook(){
 // https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjMMBlsYV-Ta5N_GKAoxRDBEa9BRZqdzQRvpiHELEPb6IPVZ73
 
 
+var onScreen = document.getElementsByTagName('img');
+onScreen[9].addEventListener('mouseover', switchit);
+
+function switchit(){
+    if(onScreen[9].src === "https://www.sagu.edu/images/thoughthub/thumbnails/2015/7-Interesting-Features-of-World-War-2-2.jpg"){
+        onScreen[9].src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjMMBlsYV-Ta5N_GKAoxRDBEa9BRZqdzQRvpiHELEPb6IPVZ73'
+    } else{
+        onScreen[9].src = "https://www.sagu.edu/images/thoughthub/thumbnails/2015/7-Interesting-Features-of-World-War-2-2.jpg"
+    }
+}
 
 // 10. The Industrial Revolution
 // Add an event listener to the h3 element and create a function that will reverse the contents in the div element id of 'gameChanger'
 
+var indusTitle = document.getElementsByClassName('title')
+
+indusTitle[9].addEventListener('click', reverse);
+
+function reverse(){
+    var indusCont = gameChanger.innerHTML;
+    var contSplit = indusCont.split('');
+    var contRever = contSplit.reverse();
+    var contJoin = contRever.join('');
+    gameChanger.innerHTML = contJoin;
+}
 
 
 // Final Boss
