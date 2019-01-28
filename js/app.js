@@ -89,6 +89,12 @@ function removeZ(){
 
 var classics = ["Charlotte's Web", "War and Peace", "The Secret", "How to Win Friends and Influence People", "Good to Great", "The Lean Startup", "The Odyssey", "Essentialism"];
 
+showBooks.addEventListener('click', randBook);
+
+function randBook(){
+    var whichOne = Math.floor(Math.random()*classics.length)
+    mustRead.innerHTML = classics[whichOne]
+}
 
 
 // 9. World War II
